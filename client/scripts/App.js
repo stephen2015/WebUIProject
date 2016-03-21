@@ -7,7 +7,7 @@ angular.module('app', dependencies);
 //路由模块
 angular.module('routeConfig', ['ngRoute']).config(function ($routeProvider) {
     var routes = [
-        'test', 'common/carousel', 'common/datePicker'
+        'test', 'common/carousel', 'common/datePicker', 'common/dropDown', 'common/pagination'
     ];
     var setRoutes = function (route) {
         var url = '/' + route;

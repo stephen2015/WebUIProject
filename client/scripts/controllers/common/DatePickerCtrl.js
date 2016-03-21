@@ -1,6 +1,7 @@
 /**
  * Created by Stephen on 2016/3/21.
  */
+
 controllersModule.controller('DatePickerCtrl', function ($scope) {
     $scope.today = function() {
         $scope.dt = new Date();

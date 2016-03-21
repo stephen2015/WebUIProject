@@ -1,0 +1,83 @@
+<style>
+    .page-list .pagination {
+        float: left;
+    }
+
+    .page-list .pagination span {
+        cursor: pointer;
+    }
+
+    .page-list .pagination .separate span {
+        cursor: default;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .page-list .pagination .separate span:hover {
+        background: none;
+    }
+
+    .page-list .page-total {
+        float: left;
+        margin: 25px 20px;
+    }
+
+    .page-list .page-total input, .page-list .page-total select {
+        height: 26px;
+        border: 1px solid #ddd;
+    }
+
+    .page-list .page-total input {
+        width: 40px;
+        padding-left: 3px;
+    }
+
+    .page-list .page-total select {
+        width: 50px;
+    }
+</style>
+<div ng-controller="PaginationCtrl">
+    <h4>Default</h4>
+    <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+
+    <uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-md" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+
+    <uib-pagination direction-links="false" boundary-links="true" total-items="totalItems" ng-model="currentPage"></uib-pagination>
+
+    <uib-pagination direction-links="false" total-items="totalItems" ng-model="currentPage" num-pages="smallnumPages"></uib-pagination>
+
+    <div class="row form-inline" >
+        <div class="col-md-4">
+            <pre class="col-md-6">The selected page no: {{currentPage}}</pre>
+            <button type="button" class="btn btn-info col-md-6" ng-click="setPage(3)" style="height: 39px;">Set current page to: 3</button>
+        </div>
+        <div class="col-md-7 col-md-offset-1 text-center">
+            <list-pagination conf="paginationConf" style="height: 39px; margin-top: -20px;"></list-pagination>
+        </div>
+    </div>
+
+    <hr/>
+    <h4>Limit the maximum visible buttons</h4>
+    <h6><code>rotate</code> defaulted to <code>true</code>:</h6>
+
+    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></uib-pagination>
+    <h6><code>rotate</code> defaulted to <code>true</code> and <code>force-ellipses</code> set to <code>true</code>:</h6>
+
+    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></uib-pagination>
+    <h6><code>rotate</code> set to <code>false</code>:</h6>
+
+    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
+    <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code>:</h6>
+
+    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"></uib-pagination>
+    <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> set to <code>false</code>:</h6>
+
+    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></uib-pagination>
+    <pre>Page: {{bigCurrentPage}} / {{numPages}}</pre>
+
+</div>
+
+
+
+
+

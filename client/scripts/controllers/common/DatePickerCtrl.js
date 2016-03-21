@@ -92,7 +92,6 @@ controllersModule.controller('DatePickerCtrl', function ($scope) {
                 }
             }
         }
-
         return '';
     }
 });

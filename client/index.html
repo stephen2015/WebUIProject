@@ -13,9 +13,10 @@
 </head>
 <body>
 
-<!--<div ng-include="'views/headerBar.html'" id="header" style="height: 100px;background-color: #31b0d5;color: snow;margin-bottom: -5px;"></div>-->
+<div ng-include="'views/headerBar.html'" id="header" style="height: 80px;background-color: #31b0d5;color: snow;margin-top: -20px;"></div>
 
 <div>
+
     <aside ng-include=" 'views/navBar.html' " id="nav-container" style="height:853px;width: 260px;background-color: #999999" class="col-sm-2"></aside>
 
     <div ng-view id="content" class="col-sm-10"></div>
@@ -26,6 +27,7 @@
 <script src="scripts/controllers/HelloCtrl.js"></script>
 <script src="scripts/controllers/common/AccordionCtrl.js"></script>
 <script src="scripts/controllers/common/CarouselCtrl.js"></script>
+<script src="scripts/controllers/common/DatePickerCtrl.js"></script>
 
 </body>
 </html>

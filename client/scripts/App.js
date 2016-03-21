@@ -7,7 +7,7 @@ angular.module('app', dependencies);
 //路由模块
 angular.module('routeConfig', ['ngRoute']).config(function ($routeProvider) {
     var routes = [
-        'test'
+        'test', 'carousel'
     ];
     var setRoutes = function (route) {
         var url = '/' + route;

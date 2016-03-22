@@ -9,10 +9,13 @@ controllersModule.controller('CarouselCtrl', function ($scope) {
     var currIndex = 0;
 
     $scope.addSlide = function() {
-        var newWidth = 600 + slides.length + 1;
+        var newWidth = slides.length + 1;
+        if (parseInt(newWidth) < 10){
+            newWidth = '0' + newWidth;
+        }
         slides.push({
-            image: 'http://lorempixel.com/' + newWidth + '/300',
-            text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+            image: 'images/0000' + newWidth + '.jpg',
+            text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 10],
             id: currIndex++
         });
     };
@@ -21,8 +24,8 @@ controllersModule.controller('CarouselCtrl', function ($scope) {
         var indexes = generateIndexesArray();
         assignNewIndexesToSlides(indexes);
     };
-
-    for (var i = 0; i < 4; i++) {
+    //当图片总数大于10以上时，点按下一张时图片会随机出现，而不是不按顺序展示
+    for (var i = 0; i < 10; i++) {
         $scope.addSlide();
     }
 

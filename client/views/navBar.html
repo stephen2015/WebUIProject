@@ -1,7 +1,6 @@
 <div ng-controller="AccordionCtrl">
     <uib-accordion close-others="oneAtTime" class="nav">
-        <uib-accordion-group heading="常见模块页面Demo" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" style="background-color: #f5f5f5;line-height: 30px;">
-            <li><a href="#/test"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>测试页面</a></li>
+        <uib-accordion-group heading="常见模块案例页面" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" style="background-color: #f5f5f5;line-height: 30px;">
             <li><a href="#/common/carousel"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>图片循环展示墙</a></li>
             <li><a href="#/common/datePicker"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>日期获取控件</a></li>
             <li><a href="#/common/dropDown"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>下拉列表式按钮</a></li>
@@ -9,10 +8,8 @@
             <li><a href="#/common/typeAhead"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>输入框下拉列表</a></li>
         </uib-accordion-group>
         <uib-accordion-group is-open="status.open">
-            <uib-accordion-heading>
-                I can have markup, too!
-            </uib-accordion-heading>
-            This is just some content to illustrate fancy headings.
+            <uib-accordion-heading>个人制作案例展示</uib-accordion-heading>
+            <li><a href="#/test"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>测试页面</a></li>
         </uib-accordion-group>
     </uib-accordion>
 </div>

@@ -10,11 +10,13 @@ controllersModule.controller('CarouselCtrl', function ($scope) {
 
     $scope.addSlide = function() {
         var newWidth = slides.length + 1;
+        // var newWidth = 600 + slides.length + 1;  //网络图片
         if (parseInt(newWidth) < 10){
             newWidth = '0' + newWidth;
         }
         slides.push({
-            image: 'images/0000' + newWidth + '.jpg',
+            image: 'images/0000' + newWidth + '.jpg',  //本地文件地址
+            // image: 'http://lorempixel.com/' + newWidth + '/300', //网络图片地址
             text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 10],
             id: currIndex++
         });

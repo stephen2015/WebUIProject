@@ -5,21 +5,19 @@
 directivesModule.directive('listPagination', [function () {
     return {
         restrict: 'EA',
-        template: '<div class="page-list">' +
-        '<ul class="pagination" ng-show="conf.totalItems > 0">' +
-        '<li ng-class="{disabled: conf.currentPage == 1}" ng-click="prevPage()"><span>&laquo;</span></li>' +
-        '<li ng-repeat="item in pageList track by $index" ng-class="{active: item == conf.currentPage, separate: item == \'...\'}" ' +
-        'ng-click="changeCurrentPage(item)">' +
-        '<span>{{ item }}</span>' +
-        '</li>' +
-        '<li ng-class="{disabled: conf.currentPage == conf.numberOfPages}" ng-click="nextPage()"><span>&raquo;</span></li>' +
-        '</ul>' +
-        '<div class="page-total" ng-show="conf.totalItems > 0">' +
-        '第<input type="text" ng-model="jumpPageNum"  ng-keyup="jumpToPage($event)"/>页/共<strong>{{ conf.numberOfPages }}</strong>页 ' +
-        '每页<select ng-model="conf.itemsPerPage" ng-options="option for option in conf.perPageOptions "></select>' +
-        '/共<strong>{{ conf.totalItems }}</strong>条' +
-        '</div>' +
-        '<div class="no-items" ng-show="conf.totalItems <= 0">暂无数据</div>' +
+        template:
+        '<div class="page-list">' +
+            '<ul class="pagination" ng-show="conf.totalItems > 0">' +
+                '<li ng-class="{disabled: conf.currentPage == 1}" ng-click="prevPage()"><span>&laquo;</span></li>' +
+                '<li ng-repeat="item in pageList track by $index" ng-class="{active: item == conf.currentPage, separate: item == \'...\'}" ' +
+                    'ng-click="changeCurrentPage(item)"><span>{{ item }}</span></li>' +
+                '<li ng-class="{disabled: conf.currentPage == conf.numberOfPages}" ng-click="nextPage()"><span>&raquo;</span></li>' +
+            '</ul>' +
+            '<div class="page-total" ng-show="conf.totalItems > 0">' +
+                '第<input type="text" ng-model="jumpPageNum"  ng-keyup="jumpToPage($event)"/>页/共<strong>{{ conf.numberOfPages }}</strong>页 ' +
+                '每页<select ng-model="conf.itemsPerPage" ng-options="option for option in conf.perPageOptions "></select>/共<strong>{{ conf.totalItems }}</strong>条' +
+            '</div>' +
+            '<div class="no-items" ng-show="conf.totalItems <= 0">暂无数据</div>' +
         '</div>',
         replace: true,
         scope: {
@@ -40,7 +38,7 @@ directivesModule.directive('listPagination', [function () {
                 // 如果不是奇数的时候处理一下
                 scope.conf.pagesLength = scope.conf.pagesLength - 1;
             }
-            // conf.erPageOptions
+            // conf.perPageOptions
             if (!scope.conf.perPageOptions) {
                 scope.conf.perPageOptions = [10, 15, 20, 30, 50];
             }

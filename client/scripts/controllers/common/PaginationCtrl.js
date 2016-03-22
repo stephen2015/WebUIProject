@@ -26,6 +26,7 @@ controllersModule.controller('PaginationCtrl', function ($scope, $log) {
         perPageOptions: [10, 20, 30, 40, 50],
         rememberPerPage: 'perPageItems',
         onChange: function(){
+            // return $scope.pageChanged();
         }
     };
 });

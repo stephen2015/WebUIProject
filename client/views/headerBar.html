@@ -1,3 +1,11 @@
-<div>
-    <h1 class="text-center" style="padding-top: 20px;">AngularJS框架模块案例展示</h1>
+<div ng-controller="HeaderBarCtrl">
+    <div class="panel-heading">
+        <div class="col-md-2">
+            <label style="padding-top: 60px;margin-left:-13px;font-size: medium">当前时间：{{currTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
+        </div>
+        <h1 class="text-center col-md-8" style="padding-top: 10px;">AngularJS框架模块案例展示</h1>
+        <div class="col-md-2">
+            <label style="margin-left: 15px; padding-top: 60px;font-size: medium">当前时间：{{currTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
+        </div>
+    </div>
 </div>

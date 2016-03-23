@@ -28,13 +28,4 @@ controllersModule.controller('HeaderBarCtrl', function ($scope, $timeout,$http, 
                 console.log(data);
             });
     }
-    // function getWeather() {
-    //     var district = '101020100';
-    //     var format = 'json';
-    //     var authkey = 'c2336ed98ccb414fa438f29ce2ac61ef';
-    //     var path = 'http://web.36wu.com/WeatherService.asmx/GetWeather?district=' + district + '&format=' + format + '&authkey=' + authkey;
-    //     $http.jsonp(path).success(function(data){
-    //         console.log(data);
-    //     });
-    // }
 });

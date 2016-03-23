@@ -3,9 +3,18 @@
         <div class="col-md-2">
             <label style="padding-top: 60px;margin-left:-13px;font-size: medium">当前时间：{{currTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
         </div>
-        <h1 class="text-center col-md-8" style="padding-top: 10px;">AngularJS框架模块案例展示</h1>
-        <div class="col-md-2">
-            <label style="margin-left: 15px; padding-top: 60px;font-size: medium">当前时间：{{currTime | date:'yyyy-MM-dd HH:mm:ss'}}</label>
+        <h1 class="text-center col-md-7" style="padding-top: 10px;">AngularJS框架模块案例展示</h1>
+        <div class="col-md-3">
+            <label style="padding-top: 10px;font-size: medium">当前实时天气情况：</label><br>
+            <label>省份：</label><span>{{currWeather.prov}};</span>
+            <label>&nbsp;城市：</label><span>{{currWeather.city}};</span>
+            <label>&nbsp;日期：</label><span>{{currWeather.dateTime}};</span>
+            <label>&nbsp;温度：</label><span>{{currWeather.minTemp}}~{{currWeather.maxTemp}};</span>
+            <label>当前温度：</label><span>{{currWeather.temp}};</span>
+            <label>&nbsp;天气：</label><span>{{currWeather.weather}};</span>
+            <label>&nbsp;风向：</label><span>{{currWeather.windDirection}};</span>
+            <label>&nbsp;风力：</label><span>{{currWeather.windForce}};</span>
+            <label>&nbsp;湿度：</label><span>{{currWeather.humidity}}</span>
         </div>
     </div>
 </div>

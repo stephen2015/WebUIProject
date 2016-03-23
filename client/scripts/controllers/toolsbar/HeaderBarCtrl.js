@@ -20,12 +20,13 @@ controllersModule.controller('HeaderBarCtrl', function ($scope, $timeout,$http, 
     };
 
     function getWeather() {
-        var district = '101020100';
-        var format = 'xml';
+        var district = '北京';
+        var format = 'json';
         var authkey = 'c2336ed98ccb414fa438f29ce2ac61ef';
-        WeatherService.getTodayWeather(district, format, authkey)
+        var callback = 'JSON_CALLBACK';
+        WeatherService.getTodayWeather(district, format, authkey, callback)
             .then(function (data) {
-                console.log(data);
+                console.log(data.data);
             });
     }
 });

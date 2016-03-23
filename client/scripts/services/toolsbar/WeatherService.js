@@ -3,14 +3,8 @@
  */
 
 servicesModule.service('WeatherService', function ($q, $http) {
-    this.headers = {
-        'Content-Type': 'text/xml; charset=utf-8',
-        'Content-Length': length
-        // 'Content-Type': 'application/x-www-form-urlencoded'
-    };
-    this.defaultConfig = {
-        headers: this.headers
-    };
+    this.headers = {'Accept': 'application/json', 'Content-Type': 'application/json'};
+    this.defaultConfig = {headers: this.headers};
 
     // 天气预报访问接口：
     // GET /WeatherService.asmx/GetWeather?district=string&authkey=string HTTP/1.1
@@ -21,14 +15,13 @@ servicesModule.service('WeatherService', function ($q, $http) {
     // authkey	string	否	    无		商用或试用的authkey，无authkey参数情况下每小时访问仅限20次，点击申请authkey
     //
 
-    this.getTodayWeather = function (district, format, authkey) {
+    this.getTodayWeather = function (district, format, authkey, callback) {
         var deferred = $q.defer();
-        var path = 'http://web.36wu.com/WeatherService.asmx/GetWeather?district=' + district + '&format=' + format + '&authkey=' + authkey;
+        var path = 'http://api.36wu.com/Weather/GetWeather?district=' + district + '&authkey=' + authkey + '&format=' + format + '&callback=' + callback;
         $http({
-            method : 'JSONP',
+            method: 'JSONP',
             cache: false,
-            url : path,
-            transformResponse: []
+            url: path
         }).success(function (data, status, headers, defaultConfig) {
             deferred.resolve(data);
         }).error(function (data, status, headers, defaultConfig) {

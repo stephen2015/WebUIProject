@@ -30,7 +30,7 @@ controllersModule.controller('HeaderBarCtrl', function ($scope, $timeout, $http,
         var district = '101190401'; //城市ID(苏州)
         var format = 'json';        //返回格式
         var authkey = 'c2336ed98ccb414fa438f29ce2ac61ef';//授权码
-        var callback = 'JSON_CALLBACK';//jsonp回调参数(必须的，不然报错)
+        var callback = 'JSON_CALLBACK';//jsonp回调参数(必须的，不然解析数据报错)
         WeatherService.getTodayWeather(district, format, authkey, callback)
             .then(function (data) {
                 if (data.status == 200) {

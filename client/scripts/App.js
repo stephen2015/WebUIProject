@@ -1,13 +1,13 @@
 /**
  * Created by Stephen on 2016/3/20.
  */
-var dependencies = ['ui.bootstrap', 'ngAnimate', 'routeConfig', 'ngRoute', 'controllers', 'services', 'directives', 'filters'];
+var dependencies = ['ui.calendar', 'ui.bootstrap', 'ngAnimate', 'routeConfig', 'ngRoute', 'controllers', 'services', 'directives', 'filters'];
 
 angular.module('app', dependencies);
 //路由模块
 angular.module('routeConfig', ['ngRoute']).config(function ($routeProvider) {
     var routes = [
-        'personal/test', 'common/carousel', 'common/datePicker', 'common/dropDown', 'common/pagination', 'common/typeAhead', 'common/tabs'
+        'personal/test', 'common/carousel', 'common/datePicker', 'common/dropDown', 'common/pagination', 'common/typeAhead', 'common/tabs', 'modules/calendar'
     ];
     var setRoutes = function (route) {
         var url = '/' + route;

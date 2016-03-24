@@ -12,6 +12,9 @@
     "bootstrap": "~3.3.6",
     "angular-bootstrap": "~1.2.4",
     "fontawesome": "~4.5.0",
-    "angular-ui-bootstrap": "~1.2.4"
+    "angular-ui-bootstrap": "~1.2.4",
+    "angular-ui-calendar": "~1.0.1",
+    "fullcalendar": "~2.6.1",
+    "jquery": "~2.2.2"
   }
 }

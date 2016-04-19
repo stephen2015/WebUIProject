@@ -1,7 +1,7 @@
 /**
- * Created by Stephen on 2016/3/20.
+ * Created by Stephen on 2016/4/19.
  */
-controllersModule.controller('GridCtrl', function ($scope, $filter) {
+controllersModule.controller('GoodsFilterCtrl', function ($scope, $filter) {
     $scope.searchKeywords = '';
     $scope.row = '';
     $scope.tempList = [];
@@ -86,3 +86,4 @@ controllersModule.controller('GridCtrl', function ($scope, $filter) {
         reGetProducts();
     }
 });
+

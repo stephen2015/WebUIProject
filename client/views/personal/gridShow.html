@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-sm-3 col-xs-6 filter-result-info">
                     <span>
-                        Showing {{products.length}}/{{products.length}} entries
+                        Showing {{filterProducts.length}}/{{products.length}} entries
                     </span>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-rating')" data-ng-class="{active: row == '-rating'}"></span>
                     </th>
                 </tr>
-                <tr ng-repeat="item in products">
+                <tr ng-repeat="item in filterProducts">
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.sales}}</td>

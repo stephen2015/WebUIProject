@@ -2,6 +2,9 @@
  * Created by Stephen on 2016/3/20.
  */
 controllersModule.controller('GridCtrl', function ($scope, $filter) {
+    $scope.searchKeywords = '';
+    $scope.row = '';
+
     // 重新获取数据条目
     var reGetProducts = function () {
         // 发送给后台的请求数据
@@ -47,10 +50,11 @@ controllersModule.controller('GridCtrl', function ($scope, $filter) {
         for (var i in $scope.productList) {
             if (Number(i) >= Number(startIndex) && Number(i) <= Number(endIndex)) {
                 $scope.products.push($scope.productList[i]);
-                if ($scope.row) {
-                    $scope.products = $filter('orderBy')($scope.products, $scope.row);
-                }
             }
+        }
+        $scope.filterProducts = $scope.products;
+        if ($scope.row) {
+            $scope.filterProducts = $filter('orderBy')($scope.products, $scope.row);
         }
     };
 
@@ -69,8 +73,14 @@ controllersModule.controller('GridCtrl', function ($scope, $filter) {
             return;
         }
         $scope.row = rowName;
-        $scope.products = $filter('orderBy')($scope.products, rowName);
+        $scope.filterProducts = $filter('orderBy')($scope.products, rowName);
     };
 
-
+    $scope.search = function () {
+        $scope.filterProducts = $filter('filter')($scope.products, $scope.searchKeywords);
+        $scope.row = '';
+        if(!$scope.searchKeywords){
+            $scope.filterProducts = $scope.products;
+        }
+    }
 });

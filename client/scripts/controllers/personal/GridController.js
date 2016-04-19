@@ -67,7 +67,7 @@ controllersModule.controller('GridCtrl', function ($scope, $filter) {
     // 通过$watch currentPage和itemperPage 当他们一变化的时候，重新获取数据条目
     $scope.$watch('paginationConf.currentPage + paginationConf.itemsPerPage', reGetProducts);
 
-    // orderBy
+    // 排序
     $scope.order = function (rowName) {
         if ($scope.row == rowName) {
             return;
@@ -76,10 +76,11 @@ controllersModule.controller('GridCtrl', function ($scope, $filter) {
         $scope.filterProducts = $filter('orderBy')($scope.products, rowName);
     };
 
+    //筛选
     $scope.search = function () {
         $scope.filterProducts = $filter('filter')($scope.products, $scope.searchKeywords);
         $scope.row = '';
-        if(!$scope.searchKeywords){
+        if (!$scope.searchKeywords) {
             $scope.filterProducts = $scope.products;
         }
     }

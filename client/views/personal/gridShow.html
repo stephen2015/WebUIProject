@@ -18,30 +18,30 @@
             </div>
         </div>
         <div class="panel-body">
-        <table class="table table-bordered table-striped table-responsive">
-            <tr>
-                <th>商店名称&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('name')" data-ng-class="{active: row == 'name'}"></span>
-                        <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-name')" data-ng-class="{active: row == '-name'}"></span>
-                </th>
-                <th>价格&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('price')" data-ng-class="{active: row == 'price'}"></span>
-                        <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-price')" data-ng-class="{active: row == '-price'}"></span>
-                </th>
-                <th>卖出数量(30天内)&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('sales')" data-ng-class="{active: row == 'sales'}"></span>
-                        <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-sales')" data-ng-class="{active: row == '-sales'}"></span>
-                </th>
-                <th>比率&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('rating')" data-ng-class="{active: row == 'rating'}"></span>
-                    <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-rating')" data-ng-class="{active: row == '-rating'}"></span>
-                </th>
-            </tr>
-            <tr ng-repeat="item in products">
-                <td>{{item.name}}</td>
-                <td>{{item.price}}</td>
-                <td>{{item.sales}}</td>
-                <td>{{item.rating}}</td>
-            </tr>
-        </table>
+            <table class="table table-bordered table-striped table-responsive">
+                <tr>
+                    <th>商店名称&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('name')" data-ng-class="{active: row == 'name'}"></span>
+                            <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-name')" data-ng-class="{active: row == '-name'}"></span>
+                    </th>
+                    <th>价格&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('price')" data-ng-class="{active: row == 'price'}"></span>
+                            <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-price')" data-ng-class="{active: row == '-price'}"></span>
+                    </th>
+                    <th>卖出数量(30天内)&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('sales')" data-ng-class="{active: row == 'sales'}"></span>
+                            <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-sales')" data-ng-class="{active: row == '-sales'}"></span>
+                    </th>
+                    <th>比率&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" data-ng-click="order('rating')" data-ng-class="{active: row == 'rating'}"></span>
+                        <span class="glyphicon glyphicon-chevron-down" data-ng-click="order('-rating')" data-ng-class="{active: row == '-rating'}"></span>
+                    </th>
+                </tr>
+                <tr ng-repeat="item in products">
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.sales}}</td>
+                    <td>{{item.rating}}</td>
+                </tr>
+            </table>
 
-        <list-pagination conf="paginationConf"></list-pagination>
+            <list-pagination conf="paginationConf"></list-pagination>
         </div>
     </section>
 </div>

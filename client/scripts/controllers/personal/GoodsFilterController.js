@@ -95,6 +95,9 @@ controllersModule.controller('GoodsFilterCtrl', function ($scope, $filter) {
             $scope.row = attr;
             $scope.tempList = $filter('ListFilter')($scope.tempList, attr, minValue, maxValue);
             reGetProducts();
+        } else {
+            $scope.tempList = $scope.productList;
+            reGetProducts();
         }
     };
 });

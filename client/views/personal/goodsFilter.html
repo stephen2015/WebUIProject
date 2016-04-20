@@ -3,7 +3,8 @@
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> 动态表格 </strong></div>
         <div class="panel-body">
             <div class="panel panel-default">
-                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> 动态筛选条件 </strong></div>
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> 动态筛选条件 </strong>&nbsp;&nbsp;
+                    <a href="javascript:;" ng-click="listFilter()">取消筛选</a></div>
                 <div class="panel-body">
                     <div class="table-filters">
                         <div class="row">
@@ -12,14 +13,12 @@
                             <a href="javascript:;" ng-click="listFilter('price', 31, 100)">31-100区间</a>&nbsp;&nbsp;
                             <a href="javascript:;" ng-click="listFilter('price', 101, 300)">101-300区间</a>&nbsp;&nbsp;
                             <a href="javascript:;" ng-click="listFilter('price', 301)">301以上</a>&nbsp;&nbsp;
-                            <a href="javascript:;" ng-click="listFilter('price')">取消筛选</a>&nbsp;&nbsp;
                         </div>
                         <div class="row">
                             <label>销量:</label>&nbsp;&nbsp;
                             <a href="javascript:;" ng-click="listFilter('sales', 0, 100)">0-100区间</a>&nbsp;&nbsp;
                             <a href="javascript:;" ng-click="listFilter('sales', 101, 500)">101-500区间</a>&nbsp;&nbsp;
                             <a href="javascript:;" ng-click="listFilter('sales', 501, 20000)">501以上</a>&nbsp;&nbsp;
-                            <a href="javascript:;" ng-click="listFilter('sales')">取消筛选</a>&nbsp;&nbsp;
                         </div>
                     </div>
                 </div>

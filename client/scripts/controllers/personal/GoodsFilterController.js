@@ -73,7 +73,7 @@ controllersModule.controller('GoodsFilterCtrl', function ($scope, $filter) {
     // 排序
     $scope.order = function (rowName) {
         if ($scope.row == rowName) {
-            return;
+            rowName = "-" + rowName
         }
         $scope.row = rowName;
         $scope.filterProducts = $filter('orderBy')($scope.products, rowName);
@@ -84,6 +84,18 @@ controllersModule.controller('GoodsFilterCtrl', function ($scope, $filter) {
         $scope.row = '';
         $scope.tempList = $filter('filter')($scope.productList, $scope.searchKeywords);
         reGetProducts();
-    }
+    };
+
+    //筛选带条件
+    $scope.listFilter = function (attr, minValue, maxValue) {
+        if (attr) {
+            if ($scope.row == attr) {
+                $scope.tempList = $scope.productList;
+            }
+            $scope.row = attr;
+            $scope.tempList = $filter('ListFilter')($scope.tempList, attr, minValue, maxValue);
+            reGetProducts();
+        }
+    };
 });
 

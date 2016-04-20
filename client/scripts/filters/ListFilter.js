@@ -33,8 +33,10 @@ filtersModule.filter("ListFilter", function () {
                     console.error("The " + value + " does not contain the attribute " + attr + " !");
                 }
             } else {
-                if (Number(value) >= Number(minValue) && Number(value) <= Number(maxValue)) {
-                    newArray.push(value);
+                if (angular.isNumber(value)) {
+                    if (Number(value) >= Number(minValue) && Number(value) <= Number(maxValue)) {
+                        newArray.push(value);
+                    }
                 }
             }
         });

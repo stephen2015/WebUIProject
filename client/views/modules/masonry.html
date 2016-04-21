@@ -1,0 +1,7 @@
+<div ng-controller="MasonryCtrl">
+    <div masonry style="width: 1500px;">
+        <div class="masonry-brick pull-left" ng-repeat="brick in bricks" style="margin-top: 5px; margin-right: 5px; ">
+            <img ng-src="{{brick.src}}" alt="A masonry brick">
+        </div>
+    </div>
+</div>

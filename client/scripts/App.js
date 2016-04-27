@@ -8,7 +8,7 @@ angular.module('app', dependencies);
 angular.module('routeConfig', ['ngRoute']).config(function ($routeProvider) {
     var routes = [
         'personal/gridShow', 'personal/goodsFilter', 'common/carousel', 'common/datePicker', 'common/dropDown', 'common/pagination', 'common/typeAhead', 'common/tabs',
-        'modules/calendar', 'modules/masonry', 'modules/loveAnimation', 'modules/accordionMenu'
+        'modules/calendar', 'modules/masonry', 'modules/loveAnimation', 'modules/loveAnimation-jQuery', 'modules/accordionMenu'
     ];
     var setRoutes = function (route) {
         var url = '/' + route;

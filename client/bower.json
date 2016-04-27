@@ -20,6 +20,9 @@
     "jquery-bridget": "~2.0.0",
     "doc-ready": "~1.0.4",
     "get-style-property": "~1.0.4",
-    "eventEmitter": "~4.3.0"
+    "eventEmitter": "~4.3.0",
+    "caman": "~4.1.2",
+    "layer": "*",
+    "garden": "~0.8.1"
   }
 }

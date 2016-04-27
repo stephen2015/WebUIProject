@@ -88,6 +88,7 @@ controllersModule.controller('GoodsFilterCtrl', function ($scope, $filter) {
 
     //筛选带条件
     $scope.listFilter = function (attr, minValue, maxValue) {
+        layer.alert("欢迎使用layer框架弹出层！");
         if (attr) {
             if ($scope.row == attr) {
                 $scope.tempList = $scope.productList;

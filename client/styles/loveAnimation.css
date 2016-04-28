@@ -12,6 +12,7 @@
 
 #loveHeart {
     float: left;
+    margin-top: 30px;
     width: 670px;
     height: 625px
 }
@@ -25,7 +26,7 @@
     text-align: right;
     font-size: 18px;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #words {
@@ -36,7 +37,7 @@
 }
 
 #messages {
-    display: none
+    display: none;
 }
 
 #elapseClock .digit {
@@ -64,6 +65,8 @@
 }
 
 #code {
+    position: relative;
+    margin-left: 100px;
     float: left;
     width: 440px;
     height: 400px;
